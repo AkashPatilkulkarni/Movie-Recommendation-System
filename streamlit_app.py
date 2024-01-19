@@ -2,24 +2,6 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
-import os
-
-
-st.write("Current Working Directory:", os.getcwd())
-
-
-# Specify the absolute path to the file
-file_path = os.path.join(os.path.dirname(__file__), 'similarity.pkl')
-
-# Check if the file exists
-if os.path.exists(file_path):
-    # Load the similarity data
-    with open(file_path, 'rb') as file:
-        similarity = pickle.load(file)
-    print("File loaded successfully.")
-else:
-    print(f"Error: File '{file_path}' not found.")
-
 
 def fetch_poster(Movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=7546171017b4a2e4c4124c25dd7febb6&language=en-US".format(Movie_id)
