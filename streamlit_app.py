@@ -3,6 +3,22 @@ import pickle
 import pandas as pd
 import requests
 
+def add_bg_from_url():
+        st.markdown(
+            f"""
+             <style>
+             .stApp {{
+                 background-image: url('https://images.pexels.com/photos/8263321/pexels-photo-8263321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+                 background-attachment: fixed;
+                 background-size: cover
+             }}
+             </style>
+             """,
+            unsafe_allow_html=True
+        )
+        
+add_bg_from_url()
+
 def fetch_poster(Movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=7546171017b4a2e4c4124c25dd7febb6&language=en-US".format(Movie_id)
     data = requests.get(url)
@@ -10,6 +26,7 @@ def fetch_poster(Movie_id):
     poster_path = data['poster_path']
     full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
     return full_path
+
 
     
 def recommend(movie):
@@ -52,4 +69,3 @@ if st.button('Recommend'):
         for i in range(5, 10):
             st.text(recommended_movie_names[i][:50])
             st.image(recommended_movie_posters[i], width=250)
-
