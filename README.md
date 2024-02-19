@@ -1,6 +1,7 @@
 # Content-Based Movie Recommendation System (END-To-END)
 
 Content-Based Movie Recommendation System using Python, StreamLIt with Global Hosting.
+UPDATED LINK 🔗 :- https://movie-recommendation-system-8hkeavnntmhjx9mejbhyfu.streamlit.app/ 
 
 LINK 🔗 :- https://movie-recommendation-system-j4ftemgaw5zz4fd8ye5pbb.streamlit.app/ 
 
